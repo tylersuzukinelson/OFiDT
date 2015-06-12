@@ -11,7 +11,8 @@ tell application "OmniFocus"
     set {completedTaskNames} to {name} of completedTasks
     log completedTaskNames
     repeat with N from 1 to count of completedTaskNames
-      log {item N of completedTaskNames}
+      set command to "./didit-cli-client/didit.rb \"" & {item N of completedTaskNames} & "\""
+      do shell script command
     end repeat
   end tell
 end tell

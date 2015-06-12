@@ -8,5 +8,7 @@ tell application "OmniFocus"
   tell default document
     set completedTasks to a reference to flattened tasks where completion date >= startDate and completion date < endDate
     log count of completedTasks
+    set {completedTaskNames} to {name} of completedTasks
+    log completedTaskNames
   end tell
 end tell

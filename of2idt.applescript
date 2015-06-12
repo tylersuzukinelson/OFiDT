@@ -10,5 +10,8 @@ tell application "OmniFocus"
     log count of completedTasks
     set {completedTaskNames} to {name} of completedTasks
     log completedTaskNames
+    repeat with N from 1 to count of completedTaskNames
+      log {item N of completedTaskNames}
+    end repeat
   end tell
 end tell

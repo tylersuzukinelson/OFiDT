@@ -1,8 +1,5 @@
-set startDate to current date
-set hours of startDate to 0
-set minutes of startDate to 0
-set seconds of startDate to 0
-set endDate to startDate + (23 * hours) + (59 * minutes) + 59
+set endDate to current date
+set startDate to endDate - (23 * hours) - (59 * minutes) - 59
 
 tell application "OmniFocus"
   tell default document

@@ -10,3 +10,4 @@ To install this script, in the terminal:
 
     ```osascript /your/chosen/installation/path/OFiDT/ofidt.applescript```
 
+The included ```com.tylersuzukinelson.ofidt.plist``` file is an example launch daemon file you can use to run the script. Please make sure to change the path to the file in this file before you use it though!

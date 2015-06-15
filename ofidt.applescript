@@ -13,6 +13,17 @@ tell application "OmniFocus"
 end tell
 
 repeat with N from 1 to count of completedTaskNames
-  set command to "" & {POSIX path of current_path} & "didit-cli-client/didit.rb \"" & {item N of completedTaskNames} & "\""
+  set task_name to {item N of completedTaskNames} as string
+  set clean_task_name to gsub(task_name, "\"", "'")
+  set command to "$rvm_path/wrappers/OFiDT/ruby " & {POSIX path of current_path} & "didit-cli-client/didit.rb \"" & clean_task_name & "\""
   do shell script command
 end repeat
+
+on gsub(query, original, replacement)
+  set AppleScript's text item delimiters to the original
+  set the item_list to every text item of query
+  set AppleScript's text item delimiters to the replacement
+  set query to the item_list as string
+  set AppleScript's text item delimiters to ""
+  return query
+end gsub

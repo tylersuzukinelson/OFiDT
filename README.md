@@ -8,6 +8,6 @@ After the ```CONFIG``` file has been set up, you can run the script in your term
 
 If you would like to automate this script, set up a launch daemon to run the following:
 
-    ```osascript /your/chosen/installation/path/OFiDT/ofidt.applescript```
+    osascript /your/chosen/installation/path/OFiDT/ofidt.applescript
 
 The included ```com.tylersuzukinelson.ofidt.plist``` file is an example launch daemon file you can use to run the script. Please make sure to change the path to the file in this file before you use it though!

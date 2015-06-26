@@ -1,12 +1,12 @@
-# Installation
-To install this script, in the terminal:
+# Configuration
 
-1. Change to the directory you where you would like to install the script.
-2. Run the following command:
+In the same directory as ```ofidt.applescript```, create a file called ```CONFIG```. On the first line of this ```CONFIG``` file, please paste your iDoneThis API token (https://idonethis.com/api/token/). On the second line of this ```CONFIG``` file, please paste the name of the team to which you would like your Dones to be sent.
 
-    ```bash <(curl -s https://raw.githubusercontent.com/tylersuzukinelson/OFiDT/master/install.sh)```
+After the ```CONFIG``` file has been set up, you can run the script in your terminal using ```osascript ofidt.applescript```.
 
-3. If you would like to automate this script, set up a launch daemon to run the following:
+# Automation
+
+If you would like to automate this script, set up a launch daemon to run the following:
 
     ```osascript /your/chosen/installation/path/OFiDT/ofidt.applescript```
 

@@ -6,8 +6,6 @@ After the ```CONFIG``` file has been set up, you can run the script in your term
 
 # Automation
 
-If you would like to automate this script, set up a launch daemon to run the following:
+I use crontab to automatically run this script at 6 PM every day. To do the same, add the following to your crontab (```crontab -e```):
 
-    osascript /your/chosen/installation/path/OFiDT/ofidt.applescript
-
-The included ```com.tylersuzukinelson.ofidt.plist``` file is an example launch daemon file you can use to run the script. Please make sure to change the path to the file in this file before you use it though!
+  00 18 * * * osascript /path/to/your/ofidt/folder/ofidt.applescript

@@ -1,10 +1,14 @@
 set endDate to current date
 set startDate to endDate - (23 * hours) - (59 * minutes) - 59
 
-set config_file to "CONFIG"
+tell application "Finder"
+  set current_path to container of (path to me) as alias
+end tell
+
+set config_file to {POSIX path of current_path} & "CONFIG" as string
 set api_token to ""
 set team_name to ""
-set lines_in_file to read config_file using delimiter {linefeed}
+set lines_in_file to paragraphs of (read POSIX file config_file)
 repeat with single_line in lines_in_file
   if length of single_line is greater than 0 then
     if (api_token is equal to "") then
